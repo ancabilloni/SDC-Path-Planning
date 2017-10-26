@@ -43,16 +43,16 @@ __<Line 255 to line 272>:__ is to load the previous data of the car's location, 
   previous planning path.
  
  __<Line 304 to line 309>__: is to check if there is any vehicle in front of the self-driving car.
- If the future position of the car in front of the self driving car is less than 30 meters away. Then two cars 
+ If the future position of the car in front of the self driving car is less than 35 meters away. Then two cars 
  are `too close` to each other, safty action is needed to be done.
  
  __<Line 369 to line 396>__: Lane Change Cost
  
  If the self driving car is too close to the car ahead, first action is to decrease the current velocity by the rate of 
  0.23 m/s per running loop. Else, if the car has velocity is lower than speed limit, it should increase 
- with the rate of 0.25 m/s per loop.
+ with the rate of 0.23 m/s per loop.
  
- If the velocity is decreased lower than 42 m/s (compare to 50 m/s speed limit). The self driving car 
+ If the velocity is decreased lower than 40 mph (compare to 50 mph speed limit). The self driving car 
  should consider switching lane to move faster with the traffic.
  
  If the car is in either left or right lane, it can switch to the middle lane. Or if the car is in the middle lane, it can switch to either left or right lane. Before the switch is done, some collision check is carried out to make sure the switch is certainly a safe choice.
