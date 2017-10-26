@@ -303,7 +303,7 @@ int main() {
               // Check distance of vehicle in front
               if ((d < (4*lane+2+2)) && (d > (4*lane))){
 //                vehicle_s += vehicle_speed*0.02*previous_path_x.size();
-                if ((vehicle_s > car_s) && ((vehicle_s - car_s) < 30)){
+                if ((vehicle_s > car_s) && ((vehicle_s - car_s) < 35)){
                   too_close = true;
                 }
               }
@@ -369,17 +369,17 @@ int main() {
             if (too_close){
               ref_vel -= 0.23;
 
-              if (ref_vel < 42) {
+              if (ref_vel < 40) {
                 if (lane == 0 or lane == 2){
-                  double collision_cost = collisionCost(mid_lane, car_s, 20, -7);
+                  double collision_cost = collisionCost(mid_lane, car_s, 25, -10);
                   if (collision_cost < 10){
                     lane = 1;
                   }
                 }
 
                 else if (lane == 1){
-                  double left_cost = collisionCost(left_lane, car_s, 20, -8);
-                  double right_cost = collisionCost(right_lane, car_s, 20, -8);
+                  double left_cost = collisionCost(left_lane, car_s, 25, -10);
+                  double right_cost = collisionCost(right_lane, car_s, 25, -10);
                   if (left_cost < right_cost){
                     if (left_cost < 10){
                       lane = 0;
@@ -392,7 +392,7 @@ int main() {
                 }
               }
             } else if(ref_vel < 49.75){
-              ref_vel += 0.25;
+              ref_vel += 0.23;
             }
 
           	vector<double> next_x_vals;
