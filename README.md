@@ -20,10 +20,6 @@ The goal of this project is to generate a path planner for the self driving car 
 - The car stays in its lane except for time between changing lange and it should not take more than 3 seconds for the lan change execution.
 - The car is able to change lanes when it can do so.
 
-### Path Generation
-
-### Cost Function for Change Lane
-
 ### Code Explanation
 __<Line 196 to Line 491>__:
 On line 207, the highway waypoints map for the simulator in `csv` file is loaded.
@@ -39,7 +35,7 @@ The maximum length of the entire track is 6945.554 meters.
 __<Line 255 to line 272>:__ is to load the previous data of the car's location, yaw, speed, and path
  if available.
  
- __<Line 275 to line 302 >__: Sensor fusion
+ __<Line 275 to line 302 >__:
  
  `sensor_fusion` provides the list of all cars on the same side of the road with the self driving car. 
  Each car is provided with `d,s` coordinate and velocity, so their location can be determined.
@@ -50,7 +46,7 @@ __<Line 255 to line 272>:__ is to load the previous data of the car's location, 
  If the future position of the car in front of the self driving car is less than 30 meters away. Then two cars 
  are `too close` to each other, safty action is needed to be done.
  
- __<Line 369 to line 396>__: 
+ __<Line 369 to line 396>__: Lane Change Cost
  
  If the self driving car is too close to the car ahead, first action is to decrease the current velocity by the rate of 
  0.23 m/s per running loop. Else, if the car has velocity is lower than speed limit, it should increase 
