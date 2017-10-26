@@ -228,7 +228,8 @@ The waypoint planning is complete.
 
 ### Conclusion
 Demonstrate of a successful path planning and lane changing: https://youtu.be/dmLuIYzf7Wg
-Future Improvement:
+
+__Future Improvement:__
 - The `spline.h` function took the heavy part of the trajectory planning for the path planning. The decelerate/accelerate rate is more of a trial and error to see which rate works best for the very specific speed limit in this case. A more systematic approach can still be implemented to path trajectory planning, and the accelerate rate should be defined based on any speed limit of the road.
 - Add more consideration for the traffic behavioral so the car can switch lane more efficient and safe.
 
