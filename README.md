@@ -3,11 +3,10 @@ Code structure:
 
 `src/main.cpp` : planning codes
 
-`spline.h` : spline generator
-
 Libraries: 
 
-`Eigen 3.3`: to help on defining matrices and vectors
+`Eigen 3.3`: to help on defining matrices and vectors.
+
 `spline.h`: to create spline/polynominal. (Source: https://github.com/ttk592/spline )
 
 
