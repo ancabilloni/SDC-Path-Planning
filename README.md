@@ -16,7 +16,7 @@ The goal of this project is to generate a path planner for the self driving car 
 - The car drives according to the speed limit.
 - Max acceleration and jerk are not exceeded 10 m/s^2 and 10 m/s^3.
 - Car does not have collisions/in contact with other cars on the road.
-- The car stays in its lane except for time between changing lange and it should not take more than 3 seconds for the lan change execution.
+- The car stays in its lane except for time between changing lange and it should not take more than 3 seconds for the lane change execution.
 - The car is able to change lanes when it can do so.
 
 ### Code Explanation
@@ -43,7 +43,7 @@ __<Line 255 to line 272>:__ is to load the previous data of the car's location, 
  
  __<Line 304 to line 309>__: is to check if there is any vehicle in front of the self-driving car.
  If the future position of the car in front of the self driving car is less than 35 meters away. Then two cars 
- are `too close` to each other, safty action is needed to be done.
+ are `too close` to each other, safety action is needed to be done.
  
  __<Line 369 to line 396>__: Lane Change Cost
  
